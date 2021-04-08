@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#44a8e8"/>
+      <stop offset="0.527" stop-color="#87cbf8"/>
+      <stop offset="1" stop-color="#7ac4f5"/>
+    </linearGradient>
+  </defs>
+  <g id="_poll" data-name=" poll" transform="translate(-202 -4142)">
+    <rect id="Path" width="24" height="24" transform="translate(202 4142)" fill="rgba(0,0,0,0)"/>
+    <path id="Icon" d="M221,4163H207a2,2,0,0,1-2-2v-14a2,2,0,0,1,2-2h14a2,2,0,0,1,2,2v14A2,2,0,0,1,221,4163Zm-3-8a1,1,0,0,0-1,1v2a1,1,0,0,0,2,0v-2A1,1,0,0,0,218,4155Zm-4-6a1,1,0,0,0-1,1v8a1,1,0,0,0,2,0v-8A1,1,0,0,0,214,4149Zm-4,3a1,1,0,0,0-1,1v5a1,1,0,0,0,2,0v-5A1,1,0,0,0,210,4152Z" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

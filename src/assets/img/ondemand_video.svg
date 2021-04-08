@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="21" viewBox="0 0 21 21">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#44a8e8"/>
+      <stop offset="0.527" stop-color="#87cbf8"/>
+      <stop offset="1" stop-color="#7ac4f5"/>
+    </linearGradient>
+  </defs>
+  <g id="_ondemand_video" data-name=" ondemand_video" transform="translate(-440 -3698)">
+    <rect id="Path" width="21" height="21" transform="translate(440 3698)" fill="rgba(0,0,0,0)"/>
+    <path id="Icon" d="M12.091,15H6.91a.85.85,0,0,1-.864-.834v-.833H1.727A1.7,1.7,0,0,1,0,11.667v-10A1.7,1.7,0,0,1,1.727,0H17.273A1.7,1.7,0,0,1,19,1.667l-.009,10a1.7,1.7,0,0,1-1.719,1.667H12.955v.833A.85.85,0,0,1,12.091,15ZM2.592,1.667a.85.85,0,0,0-.864.833v8.333a.85.85,0,0,0,.864.834H16.409a.85.85,0,0,0,.864-.834V2.5a.85.85,0,0,0-.864-.833ZM7.78,9.4a.854.854,0,0,1-.87-.835v-3.8a.853.853,0,0,1,.867-.836.883.883,0,0,1,.428.111l3.437,1.9a.823.823,0,0,1,0,1.451l-3.437,1.9A.873.873,0,0,1,7.78,9.4Z" transform="translate(441 3701)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

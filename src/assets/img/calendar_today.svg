@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="21" viewBox="0 0 21 21">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#44a8e8"/>
+      <stop offset="0.527" stop-color="#87cbf8"/>
+      <stop offset="1" stop-color="#7ac4f5"/>
+    </linearGradient>
+  </defs>
+  <g id="_calendar_today" data-name=" calendar_today" transform="translate(-474 -198)">
+    <rect id="Path" width="21" height="21" transform="translate(474 198)" fill="rgba(0,0,0,0)"/>
+    <path id="Icon" d="M15.3,19H1.7A1.716,1.716,0,0,1,0,17.273V3.454A1.716,1.716,0,0,1,1.7,1.727h.85V.864a.85.85,0,1,1,1.7,0v.864h8.5V.864a.85.85,0,1,1,1.7,0v.864h.85A1.716,1.716,0,0,1,17,3.454V17.273A1.716,1.716,0,0,1,15.3,19ZM1.7,6.046h0V16.409a.858.858,0,0,0,.85.864h11.9a.858.858,0,0,0,.85-.864V6.046Z" transform="translate(476 199)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
