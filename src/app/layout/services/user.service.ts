@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpEventType, HttpRequest, HttpErrorResponse, HttpEvent } from '@angular/common/http';
-import { environment1 } from '../../environments/environment.prod';
+import { environment1 } from '../.././../environments/environment.prod';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 @Injectable({
-	providedIn: 'root'
+  providedIn: 'root'
 })
-export class CommonService {
+export class UserService {
 	token = JSON.parse(localStorage.getItem('adminLoginData') || '{}')
 	constructor(private httpClient: HttpClient) {
 		// console.log(JSON.parse(localStorage.getItem('adminLoginData') || '{}'));
@@ -40,17 +40,13 @@ export class CommonService {
 	// 	return this.httpClient.get<any>(environment1.endPoint + "specialproductlistquartz")
 	// 		.pipe(catchError(this.handleError))
 	// }
-	login(data: any): Observable<any> {
-		return this.httpClient.post<any>(environment1.endPoint + "auth/signin", data)
-			.pipe(catchError(this.handleError))
-	}
-	signup(data: any): Observable<any> {
-		return this.httpClient.post<any>(environment1.endPoint + "auth/signup", data)
-			.pipe(catchError(this.handleError))
-	}
-	// logout(): Observable<any> {
-	// 	return this.httpClient.get<any>(environment1.endPoint + "auth/logout",  this.httpOptions)
-	// 		.pipe()
-	// }
 
+	// logout(): Observable<any> {
+	// 	return this.httpClient.get<any>(environment1.endPoint+"auth/logout", )
+	// 	.pipe()
+	// }
+	logout(): Observable<any> {
+		const api = environment1.endPoint + 'auth/logout';
+		return this.httpClient.get(api, this.httpOptions);
+	}
 }
