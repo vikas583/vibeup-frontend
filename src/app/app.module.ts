@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { AuthGuard } from "./authguard/auth.guard";
 import { CommonService } from "./common-services/common.service";
 import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-	HttpClientModule
+	HttpClientModule,
+	BrowserAnimationsModule,
+	ToastrModule.forRoot(), 
   ],
   providers: [CommonService],
   bootstrap: [AppComponent]

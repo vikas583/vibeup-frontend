@@ -15,7 +15,7 @@ export class CommonService {
 	httpOptions = {
 		headers: new HttpHeaders({
 			// 'Content-Type': 'application/json'
-			// 'Authorization':"Bearer "+ this.token.token
+			'x-access-token': this.token.token
 		})
 	}
 	private handleError(error: HttpErrorResponse) {
@@ -41,8 +41,16 @@ export class CommonService {
 	// 		.pipe(catchError(this.handleError))
 	// }
 	login(data: any): Observable<any> {
-		return this.httpClient.post<any>(environment1.endPoint + "auth/signin", data, this.httpOptions)
+		return this.httpClient.post<any>(environment1.endPoint + "auth/signin", data)
 			.pipe(catchError(this.handleError))
+	}
+	signup(data: any): Observable<any> {
+		return this.httpClient.post<any>(environment1.endPoint + "auth/signup", data)
+			.pipe(catchError(this.handleError))
+	}
+	logout(data: any): Observable<any> {
+		return this.httpClient.get<any>(environment1.endPoint + "auth/logout",  this.httpOptions)
+			.pipe()
 	}
 
 }

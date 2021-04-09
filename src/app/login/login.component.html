@@ -1,30 +1,153 @@
-<section class="login-form">
-	<div class="main-form">
-		<h4 class="txt-theme text-center mg-btm">Welcome Back!</h4>
-		<div class="text-center form-group">
-			<h6 class="txt-fade">We're so excited to see you again!</h6>
-		</div>
-		<form class="form-signin" [formGroup]="form">
-			<div class="form-group">
-				<label class="label-cstm">USERNAME</label>
-				<input type="text" name="" class="form-control" formControlName="username" required
-					[ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+<a href="#wrapper" data-type="section-switch" class="scrollup">
+	<i class="icofont-bubble-up"></i>
+</a>
+<div id="wrapper" class="wrapper overflow-hidden">
+
+	<!--=====================================-->
+	<!--=          Header Menu Start       	=-->
+	<!--=====================================-->
+	<div class="login-page-wrap">
+		<div class="content-wrap version">
+			<div class="login-content">
+				<div class="item-logo">
+					<a href="#"><img src="assets/media/logo_large.png" alt="logo"></a>
+				</div>
+				<div class="login-form-wrap">
+					<ul class="nav nav-tabs" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#login-tab" role="tab" aria-selected="true"><i class="icofont-users-alt-4"></i> Sign In </a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#registration-tab" role="tab" aria-selected="false"><i class="icofont-contact-add"></i> Sign Up</a>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane login-tab fade show active" id="login-tab" role="tabpanel">
+							<h3 class="item-title">Sign Into <span>Your Account</span></h3>
+							<form [formGroup]="form"> 
+								<div class="form-group">
+									<input type="text" class="form-control" name="login-email" required placeholder="Your E-mail"
+									 formControlName="username"
+									[ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" name="login-password" required placeholder="Password" 
+									formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+								</div>
+								<div class="form-group reset-password">
+									<a href="#">Forgotten password?</a>
+								</div>
+								<div class="text-center">
+									<p>or</p>
+								</div>
+								<div class="row">                                        
+									<div class="google-signin col-md-6">                                            
+										<a href="#" class="btn-4"><img src="assets/media/figure/google-icon.png" alt="Google">Google</a>
+									</div>               
+									<div class="google-signin col-md-6">
+										<a href="#"><img src="assets/media/figure/facebook.png" alt="Google">Facebook</a>
+									</div>
+								</div>
+								<div class="form-group mb-4">
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="validationFormCheck2">
+										<label class="form-check-label" for="validationFormCheck2"><a>Keep me as signed in</a></label>
+									</div>
+								</div>
+								<div class="form-group">
+									<input type="submit" name="login-btn" class="submit-btn" value="Login" (click) = "login()">
+								</div>
+							</form>
+							<!-- <div class="account-create">
+						Don't have an account yet? <a href="#registration-tab">Sign Up Now</a>
+					</div> -->
+						</div>
+						<div class="tab-pane registration-tab fade" id="registration-tab" role="tabpanel">
+							<h3 class="item-title">Sign Up Your Account</h3>
+							<form [formGroup]="signup">
+								<div class="form-group">
+									<input type="text" name="fname" class="form-control" placeholder="First Name" 
+									formControlName="first_name"
+									[ngClass]="{ 'is-invalid': signupSubmitted && s.first_name.errors }">
+									<div *ngIf="submitted && s.first_name.errors" class="invalid-feedback">
+										<div *ngIf="s.first_name.errors.required">Last Name is required</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<input type="text" name="lname" class="form-control" placeholder="Last Name" 
+									formControlName="last_name"
+									[ngClass]="{ 'is-invalid': signupSubmitted && s.last_name.errors }">
+									<div *ngIf="submitted && s.last_name.errors" class="invalid-feedback">
+										<div *ngIf="s.last_name.errors.required">Last Name is required</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<input type="email" name="email" class="form-control" placeholder="E-mail" 
+									formControlName="email"
+									[ngClass]="{ 'is-invalid': signupSubmitted && s.email.errors }">
+									<div *ngIf="submitted && s.email.errors" class="invalid-feedback">
+										<div *ngIf="s.email.errors.required">Email is required</div>
+										<div *ngIf="s.email.errors.email">Email must be a valid email address</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<input type="text" name="username" class="form-control" placeholder="Username" 
+									formControlName="username"
+									[ngClass]="{ 'is-invalid': signupSubmitted && s.username.errors }">
+									<div *ngIf="submitted && s.username.errors" class="invalid-feedback">
+										<div *ngIf="s.username.errors.required">Last Name is required</div>
+									</div>
+								</div>	
+								<div class="form-group">
+									<input type="text" name="Mobile_no" class="form-control" placeholder="Mobile Number" 
+									formControlName="mobile_no"
+									[ngClass]="{ 'is-invalid': signupSubmitted && s.mobile_no.errors }">
+
+								</div>
+								<div class="form-group">
+									<input type="password" name="password" class="form-control" placeholder="Type Password" 
+									formControlName="password"
+									[ngClass]="{ 'is-invalid': signupSubmitted && s.password.errors }">
+									<div *ngIf="submitted && s.password.errors" class="invalid-feedback">
+										<div *ngIf="s.password.errors.required">Password is required</div>
+										<div *ngIf="s.password.errors.minlength">Password must be at least 6 characters</div>
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<input type="password" name="password" class="form-control" placeholder="Confirm Password" 
+									formControlName="confirm_password"
+									[ngClass]="{ 'is-invalid': signupSubmitted && s.confirm_password.errors }">
+									<div *ngIf="submitted && s.confirm_password.errors" class="invalid-feedback">
+										<div *ngIf="s.confirm_password.errors.required">Confirm Password is required</div>
+										<div *ngIf="s.confirm_password.errors.mustMatch">Passwords must match</div>
+									</div>
+								</div>
+								<!-- <div class="form-group">
+									<select class="select2" name="gender" data-placeholder="Select Gender" 
+									formControlName="username"
+									[ngClass]="{ 'is-invalid': signupSubmitted && s.username.errors }">
+										<option value=""></option>
+										<option value="male">Male</option>
+										<option value="male">Female</option>
+										<option value="transgender">Transgender</option>
+									</select>
+								</div> -->
+								<div class="form-group">
+									<div class="form-check mb-3">
+										<input type="checkbox" class="form-check-input" id="validationFormCheck1" required formControlName="term"
+										[ngClass]="{ 'is-invalid': signupSubmitted && s.confirm_password.errors }">
+										<label class="form-check-label" for="validationFormCheck1">I accept the <a>Terms and Conditions</a></label>
+									</div>
+								</div>
+								<div class="form-group">
+									<input type="submit" name="registration" class="submit-btn" value="Complete Registration" (click) = "signupSubmit()">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="">
-				<label class="label-cstm">PASSWORD</label>
-				<input type="password" name="" class="form-control" required formControlName="password"
-					[ngClass]="{ 'is-invalid': submitted && f.password.errors }">
-			</div>
-			<div class="form-group">
-				<a class="forgot-pass" href="forgot.html"> Forgot your Password?</a>
-			</div>
-			<div class="form-group">
-				<div class="see_all"><a (click)="login()">Login</a></div>
-			</div>
-		</form>
-		<div>
-			<span>Need an Account?&nbsp;<a class="forgot-pass" routerLink="/signup">Register</a></span>
+		   
 		</div>
 	</div>
-
-</section>
